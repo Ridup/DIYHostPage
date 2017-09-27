@@ -2,7 +2,7 @@
 * @Author: Marte
 * @Date:   2017-09-23 10:44:48
 * @Last Modified by:   Marte
-* @Last Modified time: 2017-09-26 22:58:23
+* @Last Modified time: 2017-09-27 22:59:33
 */
 body{
     margin:0;
@@ -25,8 +25,8 @@ body{
 
 
 .MainContainer{width:100%;}
-.sidebar{width:45%;float:left;margin-left:100px;margin-right:-180px;border-right:1px solid #ccc;min-height:500px;padding:5px;}
-.main{float:left;margin-left:200px;padding-left:20px;}
+.sidebar{width:45%;float:left;margin-left:100px;margin-right:-180px;min-height:500px;padding:5px;}
+.main{float:left;width:585px;margin-left:200px;padding-left:20px;}
 
 
 
@@ -53,33 +53,36 @@ body{
     font-family: "Segoe UI","Microsoft Yahei",Arial;
 }
 
-#myTag1{
-    float: left;
-    font-size:22px;
-    color:white;
-}
-#myTag1 li{
-    margin-bottom: 55px;
-}
-
-#myTag1 li:hover{
-    color:red;
-}
-
-
-
 #myTag{
-    float: right;
     font-size:16px;
     color:white;
     margin-top:10px;
+}
+#myTag ul{
+    margin-top: 10px;
+    float: left;
 }
 #myTag li{
     float: left;
     margin-bottom: 55px;
     margin-left: 15px;
+    margin-bottom:15px;
     display:inline;
+    padding-bottom:10px;
 }
 
+#myTag a{
+    text-decoration:none;
+    color:#E8F1FF;
+}
 
-
+#myTag a:hover{
+    background-color: #449D6F;
+    cursor: pointer;
+    border-radius: 5px;
+    text-decoration-line: underline;
+    transition:background-color 1s;
+    -moz-transition:background-color 1s; /* Firefox 4 */
+    -webkit-transition:background-color 1s; /* Safari and Chrome */
+    -o-transition:background-color 1s; /* Opera */
+}

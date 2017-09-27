@@ -23,17 +23,16 @@
             <div id="title">
             </div>
             <div id="topButton">
-                <!-- <img src="images/refresh.png" alt="更换背景图片" onclick="changeBg();">&nbsp; -->
                 <div class="changeImg" onclick="changeBg();">
                   <span style="font-size: 40px;color: white;">◎</span>
                 </div>
                 <div class="helpTip">
-                  <span style="font-size: 22px;color: white;">？</span>
+                  <span style="font-size: 22px;color: white;"><a href="javascript:void(0)" class="easyui-linkbutton" onclick="topRight()">？</a></span>
                 </div>
             </div>
         </div>
-        <div class="MainContainer" style="border:1px solid red;">
-            <div class="sidebar" style="border:1px solid red;">
+        <div class="MainContainer">
+            <div class="sidebar">
 
               <input id="sbaidu" class="easyui-searchbox" style="width:600px;height:40px;"
               data-options="searcher:baiduSearch,prompt:'百度',menu:'#baidu'" >
@@ -86,61 +85,111 @@
 
 
 
-            <div  id="main" class="main" style="border:1px solid red;">
+            <div  id="main" class="main">
               <div id="myTag" class="tagBox">
                 <ul>
                     <li class="_tagBox tagBox1">常用</li>
-                    <li><a href="http://www.runoob.com/"></a></li>
-                    <li>知识</li>
-                    <li>学习</li>
-                    <li>购物</li>
-                    <li>影音</li>
+                    <li><a href="http://fanyi.baidu.com/?aldtype=85#en/zh/" target="_blank">百度翻译</a></li>
+                    <li><a href="https://translate.google.com.hk/?hl=zh-CN" target="_blank">google翻译</a></li>
+                    <li><a href="http://fanyi.youdao.com/" target="_blank">有道翻译</a></li>
+                    <li><a href="https://pan.baidu.com/" target="_blank">百度云盘</a></li>
+                    <li><a href="https://www.52pojie.cn/" target="_blank">吾爱破解</a></li>
+                    <li><a href="hhttps://smallpdf.com/cn" target="_blank">PDF</a></li>
                 </ul>
                 <ul>
                     <li class="_tagBox tagBox2">社交</li>
-                    <li>社交</li>
-                    <li>知识</li>
-                    <li>学习</li>
-                    <li>购物</li>
-                    <li>影音</li>
+                    <li>
+                      <a href="http://weibo.com/" target="_blank">新浪</a>
+                    </li>
+                    <li>
+                      <a href="https://www.zhihu.com/" target="_blank">知乎</a>
+                    </li>
+                    <li>
+                      <a href="https://user.qzone.qq.com/" target="_blank">QQ空间</a>
+                    </li>
+                    <li>
+                      <a href="https://www.douyu.com/" target="_blank">斗鱼直播</a>
+                    </li>
                 </ul>
                 <ul>
                     <li class="_tagBox tagBox3">知识</li>
-                    <li>社交</li>
-                    <li>知识</li>
-                    <li>学习</li>
-                    <li>购物</li>
-                    <li>影音</li>
+                    <li>
+                      <a href="http://www.runoob.com/" target="_blank">菜鸟</a>
+                    </li>
+                    <li>
+                      <a href="http://tool.oschina.net/apidocs" target="_blank">API文档</a>
+                    </li>
+                    <li>
+                      <a href="http://www.csdn.net/" target="_blank">CSDN</a>
+                    </li>
+                    <li>
+                      <a href="http://www.jianshu.com/" target="_blank">简书</a>
+                    </li>
                 </ul>
+                <br>
                 <ul>
                     <li class="_tagBox tagBox4">学习</li>
-                    <li>社交</li>
-                    <li>知识</li>
-                    <li>学习</li>
-                    <li>购物</li>
-                    <li>影音</li>
+                    <li>
+                      <a href="https://www.nowcoder.com/" target="_blank">牛客</a>
+                    </li>
+                    <li>
+                      <a href="http://www.zhizuobiao.com/personal/myCourse?pageNo=2" target="_blank">职坐标</a>
+                    </li>
+                    <li>
+                      <a href="https://www.boxuegu.com/" target="_blank">博学谷</a>
+                    </li>
+                    <li>
+                      <a href="https://www.oschina.net/" target="_blank">开源中国</a>
+                    </li>
                 </ul>
+                <br>
                 <ul>
                     <li class="_tagBox tagBox5">购物</li>
-                    <li>社交</li>
-                    <li>知识</li>
-                    <li>学习</li>
-                    <li>购物</li>
-                    <li>影音</li>
+                    <li>
+                      <a href="https://www.taobao.com/" target="_blank">淘宝</a>
+                    </li>
+                    <li>
+                      <a href="https://www.jd.com/" target="_blank">京东</a>
+                    </li>
+                    <li>
+                      <a href="https://www.gome.com.cn/" target="_blank">国美</a>
+                    </li>
+                    <li>
+                      <a href="https://www.suning.com/" target="_blank">苏宁</a>
+                    </li>
                 </ul>
+                <br>
                 <ul>
                     <li class="_tagBox tagBox6">影音</li>
-                    <li>社交</li>
-                    <li>知识</li>
-                    <li>学习</li>
-                    <li>购物</li>
-                    <li>影音</li>
+                    <li>
+                      <a href="https://www.douban.com/" target="_blank">豆瓣</a>
+                    </li>
+                    <li>
+                      <a href="https://www.youtube.com/" target="_blank">Youtube</a>
+                    </li>
+                    <li>
+                      <a href="http://www.iqiyi.com/" target="_blank">爱奇艺</a>
+                    </li>
+                    <li>
+                      <a href="https://v.qq.com/" target="_blank">腾讯视频</a>
+                    </li>
+                    <li>
+                      <a href="http://www.youku.com/" target="_blank">优酷</a>
+                    </li>
+                    <li>
+                      <a href="http://xm.xmmj.tv/" target="_blank">熊猫美剧</a>
+                    </li>
+                    <li>
+                      <a href="http://aaqqy.com/" target="_blank">高清影院</a>
+                    </li>
+                    <li>
+                      <a href="http://www.yinyuetai.com/" target="_blank">音悦台</a>
+                    </li>
                 </ul>
               </div>
               <iframe src="http://www.baidu.com" scrolling="no" style="display: none;"></iframe>
             </div>
         </div>
     </div>
-
   </body>
 </html>

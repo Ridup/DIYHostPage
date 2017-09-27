@@ -2,7 +2,7 @@
 * @Author: Marte
 * @Date:   2017-09-23 10:41:40
 * @Last Modified by:   Marte
-* @Last Modified time: 2017-09-26 19:01:12
+* @Last Modified time: 2017-09-27 23:46:10
 */
 
 'use strict';
@@ -25,6 +25,10 @@ jQuery(document).ready(function($) {
 },function(){
     $(".helpTip span").css("color","white");
 });
+
+
+
+
 
 });
 
@@ -76,5 +80,17 @@ function changeBg(){
 
 
 window.onload = function() {
-  document.getElementById("_easyui_textbox_input1").focus();
+    var input = document.getElementById("_easyui_textbox_input1");
+    input.focus();
 };
+
+
+$(document).keydown(function(event){
+
+console.log(event.keyCode);
+
+});
+
+
+
+

@@ -2,7 +2,7 @@
 * @Author: Marte
 * @Date:   2017-09-25 18:53:18
 * @Last Modified by:   Marte
-* @Last Modified time: 2017-09-26 20:48:55
+* @Last Modified time: 2017-09-27 23:56:32
 */
 
 'use strict';
@@ -133,3 +133,22 @@ function btSearch(value,name){
     }
     window.open(url,"_blank");
 }*/
+
+
+
+
+
+
+function topRight(){
+            $.messager.show({
+                title:'使用说明',
+                msg:'(^_^)',
+                showType:'show',
+                style:{
+                    left:'',
+                    right:0,
+                    top:document.body.scrollTop+document.documentElement.scrollTop,
+                    bottom:''
+                }
+            });
+        }
