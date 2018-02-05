@@ -114,9 +114,9 @@ function btSearch(value,name){
     }
     if(name=="btsou"){
         if(value!=""){
-            url="http://www.btsou.biz/list/"+value+"/1";
+            url="http://www.btsou.co/list/"+value+"/1";
         }else{
-            url="http://www.btsou.biz";
+            url="http://www.btsou.co";
         }
     }
     window.open(url,"_blank");
