@@ -6,8 +6,24 @@
 */
 
 'use strict';
-jQuery(document).ready(function($) {
+jQuery(document).ready(function ($) {
     //加载背景图片
+    if (!window.localStorage) {
+        $.messager.show({
+            title: 'Tips',
+            msg: 'Your browser is not support localStorage !',
+            showType: 'show',
+            style: {
+                right: '',
+                top: document.body.scrollTop + document.documentElement.scrollTop,
+                bottom: ''
+            }
+        });
+    } else {
+        var currentBG = window.localStorage.getItem("currentBG");
+        $(".page").attr("style", currentBG);
+    }
+
     /*alert("beginning...");
     var strUrl = "";
     var NewXmlDoc = loadXML("../xml/config.xml");
@@ -15,19 +31,16 @@ jQuery(document).ready(function($) {
     var strUrl = NewTmpTag[0].getElementsByTagName("now-image")[0].firstChild.nodeValue;
     alert(strUrl);*/
     //元素hover()特效
-    $(".changeImg").hover(function(){
-    $(".changeImg span").css("color","#1ADACF");
-},function(){
-    $(".changeImg span").css("color","white");
-});
-    $(".helpTip").hover(function(){
-    $(".helpTip span").css("color","#1ADACF");
-},function(){
-    $(".helpTip span").css("color","white");
-});
-
-
-
+    $(".changeImg").hover(function () {
+        $(".changeImg span").css("color", "#1ADACF");
+    }, function () {
+        $(".changeImg span").css("color", "white");
+    });
+    $(".helpTip").hover(function () {
+        $(".helpTip span").css("color", "#1ADACF");
+    }, function () {
+        $(".helpTip span").css("color", "white");
+    });
 
 
 });
@@ -52,13 +65,27 @@ jQuery(document).ready(function($) {
 }*/
 
 //背景图片切换
-function changeBg(){
-    var randomNumber = parseInt(Math.random()*(4050-1+1) + 1);
+function changeBg() {
+    var randomNumber = parseInt(Math.random() * (4050 - 1 + 1) + 1);
     var imgBgUrl =
-    "background-image: url('https://img.infinitynewtab.com/wallpaper/"+randomNumber+".jpg');"
-    $(".page").attr("style",imgBgUrl);
+        "background-image: url('https://img.infinitynewtab.com/wallpaper/" + randomNumber + ".jpg');"
+    $(".page").attr("style", imgBgUrl);
 
-    // //保存图片路径
+    //保存图片路径
+    if (!window.localStorage) {
+        $.messager.show({
+            title: 'Tips',
+            msg: 'Your browser is not support localStorage !',
+            showType: 'show',
+            style: {
+                right: '',
+                top: document.body.scrollTop + document.documentElement.scrollTop,
+                bottom: ''
+            }
+        });
+    } else {
+        window.localStorage.setItem("currentBG",imgBgUrl);
+    }
     // XmlDocument xmlDoc=new XmlDocument();
     // xmlDoc.Load("config.xml");
     // XmlNode xn=xmlDoc.SelectSingleNode("background-images");
@@ -72,22 +99,18 @@ function changeBg(){
     //
 
 
-
-
-
 }
 
 
-
-window.onload = function() {
+window.onload = function () {
     var input = document.getElementById("_easyui_textbox_input1");
     input.focus();
 };
 
 
-$(document).keydown(function(event){
+$(document).keydown(function (event) {
 
-console.log(event.keyCode);
+    console.log(event.keyCode);
 
 });
 
