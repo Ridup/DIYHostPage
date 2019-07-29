@@ -1,14 +1,9 @@
-/*
-* @Author: Marte
-* @Date:   2017-09-23 10:44:48
-* @Last Modified by:   Marte
-* @Last Modified time: 2017-09-27 22:59:33
-*/
-body{
-    margin:0;
-    padding:0;
+body {
+    margin: 0;
+    padding: 0;
 }
-.page{
+
+.page {
     background-image: url("../images/bg.jpg");
     z-index: 5;
     background-size: cover;
@@ -21,68 +16,108 @@ body{
     left: 0;
     overflow: hidden;
 }
-.header{height:55px;}
+
+.header {
+    height: 55px;
+}
 
 
-.MainContainer{width:100%;}
-.sidebar{width:45%;float:left;margin-left:100px;margin-right:-180px;min-height:500px;padding:5px;}
-.main{float:left;width:585px;margin-left:200px;padding-left:20px;}
+.MainContainer {
+    width: 100%;
+}
+
+.sidebar {
+    width: 45%;
+    float: left;
+    margin-left: 100px;
+    margin-right: -180px;
+    min-height: 500px;
+    padding: 5px;
+}
+
+.main {
+    float: left;
+    width: 585px;
+    margin-left: 200px;
+    padding-left: 20px;
+}
 
 
+#topButton {
+    float: right;
+    display: inline;
+}
 
-#topButton{float: right;display: inline;}
-.changeImg{height: 100%;margin-right:15px;display: inline;cursor: pointer;}
-.helpTip{width: 40px;height: 40px;margin-top: 12px;margin-right:8px;float: right;display: inline;cursor: pointer;}
+.changeImg {
+    height: 100%;
+    margin-right: 15px;
+    display: inline;
+    cursor: pointer;
+}
 
+.helpTip {
+    width: 40px;
+    height: 40px;
+    margin-top: 12px;
+    margin-right: 8px;
+    float: right;
+    display: inline;
+    cursor: pointer;
+}
+
+.cloudMusic {
+    vertical-align: super;
+    margin-right: 8px;
+    display: inline;
+    cursor: pointer;
+}
 
 /* 搜索 */
-
 .easyui-searchbox {
-    margin-top:500px;
+    margin-top: 500px;
     font-size: 30px;
 }
 
 
-
 /* 书签 */
-
-
-._tagBox{
-    font-size:22px;
-    color:white;
-    font-family: "Segoe UI","Microsoft Yahei",Arial;
+._tagBox {
+    font-size: 22px;
+    color: white;
+    font-family: "Segoe UI", "Microsoft Yahei", Arial;
 }
 
-#myTag{
-    font-size:16px;
-    color:white;
-    margin-top:10px;
+#myTag {
+    font-size: 16px;
+    color: white;
+    margin-top: 10px;
 }
-#myTag ul{
+
+#myTag ul {
     margin-top: 10px;
     float: left;
 }
-#myTag li{
+
+#myTag li {
     float: left;
     margin-bottom: 55px;
     margin-left: 15px;
-    margin-bottom:15px;
-    display:inline;
-    padding-bottom:10px;
+    margin-bottom: 15px;
+    display: inline;
+    padding-bottom: 10px;
 }
 
-#myTag a{
-    text-decoration:none;
-    color:#E8F1FF;
+#myTag a {
+    text-decoration: none;
+    color: #E8F1FF;
 }
 
-#myTag a:hover{
+#myTag a:hover {
     background-color: #449D6F;
     cursor: pointer;
     border-radius: 5px;
     text-decoration-line: underline;
-    transition:background-color 1s;
-    -moz-transition:background-color 1s; /* Firefox 4 */
-    -webkit-transition:background-color 1s; /* Safari and Chrome */
-    -o-transition:background-color 1s; /* Opera */
+    transition: background-color 1s;
+    -moz-transition: background-color 1s; /* Firefox 4 */
+    -webkit-transition: background-color 1s; /* Safari and Chrome */
+    -o-transition: background-color 1s; /* Opera */
 }
