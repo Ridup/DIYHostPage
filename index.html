@@ -1,205 +1,213 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>我的主页</title>
-    <!-- 小图显示在浏览器的标签上 -->
-    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
-    <link rel="stylesheet" href="css/divcss.css">
-    <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
-    <script type="text/javascript" src="js/pageLoad.js"></script>
-    <!-- easyUI -->
-    <link rel="stylesheet" type="text/css" href="js/jquery-easyui-1.5.3/themes/default/easyui.css">
+<head>
+  <meta charset="utf-8">
+  <title>我的主页</title>
+  <!-- 小图显示在浏览器的标签上 -->
+  <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon"/>
+  <link rel="stylesheet" href="css/divcss.css">
+  <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+  <script type="text/javascript" src="js/pageLoad.js"></script>
+  <!-- easyUI -->
+  <link rel="stylesheet" type="text/css" href="js/jquery-easyui-1.5.3/themes/default/easyui.css">
   <link rel="stylesheet" type="text/css" href="js/jquery-easyui-1.5.3/themes/icon.css">
   <link rel="stylesheet" type="text/css" href="js/jquery-easyui-1.5.3/demo/demo.css">
   <script type="text/javascript" src="js/jquery-easyui-1.5.3/jquery.min.js"></script>
   <script type="text/javascript" src="js/jquery-easyui-1.5.3/jquery.easyui.min.js"></script>
   <!-- 搜索 -->
   <script src="js/search.js"></script>
-  </head>
-  <body>
-     <div class="page">
-        <div class="header">
-            <div id="title">
-            </div>
-            <div id="topButton">
-              <a class="cloudMusic" onclick="toMyCloudMusic();">
-                <span style="font-size: 36px;color: white;">♪</span>
-              </a>
-                <div class="changeImg" onclick="changeBg();">
-                  <span style="font-size: 51px;color: white;">◎</span>
-                </div>
-                <!--<div class="helpTip">
-                  <span style="font-size: 22px;color: white;"><a href="javascript:void(0)" class="easyui-linkbutton" onclick="topRight()">？</a></span>
-                </div>-->
-            </div>
-        </div>
-        <div class="MainContainer">
-            <div class="sidebar">
-
-              <input id="sbaidu" class="easyui-searchbox" style="width:600px;height:40px;"
-              data-options="searcher:baiduSearch,prompt:'百度',menu:'#baidu'" >
-              <div id="baidu" style="width:120px">
-                <div data-options="name:'net',iconCls:'icon-ok'">网页</div>
-                <div data-options="name:'picture'">图片</div>
-              </div><br><br><br><br>
-
-              <input id="sgoogle" class="easyui-searchbox" style="width:600px;height:40px;"
-              data-options="searcher:googleSearch,prompt:'谷歌',menu:'#google'">
-              <div id="google" style="width:120px">
-                <div data-options="name:'net',iconCls:'icon-ok'">网页</div>
-                <div data-options="name:'picture'">图片</div>
-              </div><br><br><br><br>
-
-              <input id="sbing" class="easyui-searchbox" style="width:600px;height:40px;"
-              data-options="searcher:bingSearch,prompt:'必应',menu:'#bing'">
-              <div id="bing" style="width:120px">
-                <div data-options="name:'net',iconCls:'icon-ok'">网页</div>
-                <div data-options="name:'picture'">图片</div>
-              </div><br><br><br><br>
-
-              <input id="staobao" class="easyui-searchbox" style="width:600px;height:40px;"
-              data-options="searcher:taobaoSearch,prompt:'淘宝',menu:'#taobao'">
-              <div id="taobao" style="width:120px">
-                <div data-options="name:'goods',iconCls:'icon-ok'">宝贝</div>
-                <div data-options="name:'shops'">店铺</div>
-              </div><br><br><br><br>
-
-              <input id="sjd" class="easyui-searchbox" style="width:600px;height:40px;"
-              data-options="searcher:jdSearch,prompt:'京东'"><br><br><br><br>
-
-              <input id="scrazy" class="easyui-searchbox" style="width:600px;height:40px;"
-              data-options="searcher:crazySearch,prompt:'疯狂影视'"><br><br><br><br>
-
-              <input id="sbt" class="easyui-searchbox" style="width:600px;height:40px;"
-              data-options="searcher:btSearch,prompt:'BT',menu:'#bt'">
-              <div id="bt" style="width:120px">
-                <div data-options="name:'digbt',iconCls:'icon-ok'">digbt</div>
-                <div data-options="name:'btsou'">BtSou</div>
-              </div><br><br><br><br>
-
-              <!-- <input id="syunpan" class="easyui-searchbox" style="width:600px;height:40px;"
-              data-options="searcher:panSearch,prompt:'云盘'"> -->
-
-            </div>
-
-
-
-
-            <div  id="main" class="main">
-              <div id="myTag" class="tagBox">
-                <ul>
-                    <li class="_tagBox tagBox1">常用</li>
-                    <li><a href="http://fanyi.baidu.com/?aldtype=85#en/zh/" target="_blank">百度翻译</a></li>
-                    <li><a href="https://translate.google.com.hk/?hl=zh-CN" target="_blank">google翻译</a></li>
-                    <li><a href="http://fanyi.youdao.com/" target="_blank">有道翻译</a></li>
-                    <li><a href="https://pan.baidu.com/" target="_blank">百度云盘</a></li>
-                    <li><a href="https://www.52pojie.cn/" target="_blank">吾爱破解</a></li>
-                    <li><a href="https://smallpdf.com/cn" target="_blank">PDF</a></li>
-                </ul>
-                <ul>
-                    <li class="_tagBox tagBox2">社交</li>
-                    <li>
-                      <a href="http://weibo.com/" target="_blank">新浪</a>
-                    </li>
-                    <li>
-                      <a href="https://www.zhihu.com/" target="_blank">知乎</a>
-                    </li>
-                    <li>
-                      <a href="https://user.qzone.qq.com/" target="_blank">QQ空间</a>
-                    </li>
-                    <li>
-                      <a href="https://www.douyu.com/" target="_blank">斗鱼直播</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li class="_tagBox tagBox3">知识</li>
-                    <li>
-                      <a href="http://www.runoob.com/" target="_blank">菜鸟</a>
-                    </li>
-                    <li>
-                      <a href="http://tool.oschina.net/apidocs" target="_blank">API文档</a>
-                    </li>
-                    <li>
-                        <a href="https://github.com/" target="_blank">GitHub</a>
-                    </li>
-                    <li>
-                        <a href="https://www.cnblogs.com/" target="_blank">博客园</a>
-                    </li>
-                    <li>
-                      <a href="http://www.csdn.net/" target="_blank">CSDN</a>
-                    </li>
-                    <li>
-                      <a href="http://www.jianshu.com/" target="_blank">简书</a>
-                    </li>
-                </ul>
-                <br>
-                <ul>
-                    <li class="_tagBox tagBox4">学习</li>
-                    <li>
-                      <a href="https://www.nowcoder.com/" target="_blank">牛客</a>
-                    </li>
-                    <li>
-                        <a href="https://www.hackerrank.com/" target="_blank">HackerRank</a>
-                    </li>
-                    <li>
-                      <a href="http://www.zhizuobiao.com/personal/myCourse?pageNo=2" target="_blank">职坐标</a>
-                    </li>
-                    <li>
-                      <a href="https://www.boxuegu.com/" target="_blank">博学谷</a>
-                    </li>
-                    <li>
-                      <a href="https://www.oschina.net/" target="_blank">开源中国</a>
-                    </li>
-                </ul>
-                <br>
-                <ul>
-                    <li class="_tagBox tagBox5">购物</li>
-                    <li>
-                      <a href="https://www.taobao.com/" target="_blank">淘宝</a>
-                    </li>
-                    <li>
-                      <a href="https://www.jd.com/" target="_blank">京东</a>
-                    </li>
-                    <li>
-                      <a href="https://www.gome.com.cn/" target="_blank">国美</a>
-                    </li>
-                    <li>
-                      <a href="https://www.suning.com/" target="_blank">苏宁</a>
-                    </li>
-                </ul>
-                <br>
-                <ul>
-                    <li class="_tagBox tagBox6">影音</li>
-                    <li>
-                      <a href="https://www.douban.com/" target="_blank">豆瓣</a>
-                    </li>
-                    <li>
-                      <a href="https://www.youtube.com/" target="_blank">Youtube</a>
-                    </li>
-                    <li>
-                      <a href="http://www.iqiyi.com/" target="_blank">爱奇艺</a>
-                    </li>
-                    <li>
-                      <a href="https://v.qq.com/" target="_blank">腾讯视频</a>
-                    </li>
-                    <li>
-                      <a href="http://www.youku.com/" target="_blank">优酷</a>
-                    </li>
-                    <li>
-                      <a href="http://www.alamr.cn/" target="_blank">优看影院</a>
-                    </li>
-                    <li>
-                      <a href="http://aaqqy.com/" target="_blank">高清影院</a>
-                    </li>
-                    <li>
-                      <a href="http://www.yinyuetai.com/" target="_blank">音悦台</a>
-                    </li>
-                </ul>
-              </div>
-              <iframe src="http://www.baidu.com" scrolling="no" style="display: none;"></iframe>
-            </div>
-        </div>
+</head>
+<body>
+<div class="page">
+  <div class="header">
+    <div id="title">
     </div>
-  </body>
+    <div id="topButton">
+      <a class="cloudMusic" onclick="toMyCloudMusic();">
+        <span style="font-size: 36px;color: white;">♪</span>
+      </a>
+      <div class="changeImg" onclick="changeBg();">
+        <span style="font-size: 51px;color: white;">◎</span>
+      </div>
+      <!--<div class="helpTip">
+        <span style="font-size: 22px;color: white;"><a href="javascript:void(0)" class="easyui-linkbutton" onclick="topRight()">？</a></span>
+      </div>-->
+    </div>
+  </div>
+  <div class="MainContainer">
+    <div class="sidebar">
+
+      <input id="sbaidu" class="easyui-searchbox" style="width:600px;height:40px;"
+             data-options="searcher:baiduSearch,prompt:'百度',menu:'#baidu'">
+      <div id="baidu" style="width:120px">
+        <div data-options="name:'net',iconCls:'icon-ok'">网页</div>
+        <div data-options="name:'picture'">图片</div>
+      </div>
+      <br><br><br><br>
+
+      <input id="sgoogle" class="easyui-searchbox" style="width:600px;height:40px;"
+             data-options="searcher:googleSearch,prompt:'谷歌',menu:'#google'">
+      <div id="google" style="width:120px">
+        <div data-options="name:'net',iconCls:'icon-ok'">网页</div>
+        <div data-options="name:'picture'">图片</div>
+      </div>
+      <br><br><br><br>
+
+      <input id="sbing" class="easyui-searchbox" style="width:600px;height:40px;"
+             data-options="searcher:bingSearch,prompt:'必应',menu:'#bing'">
+      <div id="bing" style="width:120px">
+        <div data-options="name:'net',iconCls:'icon-ok'">网页</div>
+        <div data-options="name:'picture'">图片</div>
+      </div>
+      <br><br><br><br>
+
+      <input id="staobao" class="easyui-searchbox" style="width:600px;height:40px;"
+             data-options="searcher:taobaoSearch,prompt:'淘宝',menu:'#taobao'">
+      <div id="taobao" style="width:120px">
+        <div data-options="name:'goods',iconCls:'icon-ok'">宝贝</div>
+        <div data-options="name:'shops'">店铺</div>
+      </div>
+      <br><br><br><br>
+
+      <input id="sjd" class="easyui-searchbox" style="width:600px;height:40px;"
+             data-options="searcher:jdSearch,prompt:'京东'"><br><br><br><br>
+
+      <input id="scrazy" class="easyui-searchbox" style="width:600px;height:40px;"
+             data-options="searcher:crazySearch,prompt:'疯狂影视'"><br><br><br><br>
+
+      <input id="sbt" class="easyui-searchbox" style="width:600px;height:40px;"
+             data-options="searcher:btSearch,prompt:'BT',menu:'#bt'">
+      <div id="bt" style="width:120px">
+        <div data-options="name:'digbt',iconCls:'icon-ok'">digbt</div>
+        <div data-options="name:'btsou'">BtSou</div>
+      </div>
+      <br><br><br><br>
+
+      <!-- <input id="syunpan" class="easyui-searchbox" style="width:600px;height:40px;"
+      data-options="searcher:panSearch,prompt:'云盘'"> -->
+
+    </div>
+
+
+    <div id="main" class="main">
+      <div id="myTag" class="tagBox">
+        <ul>
+          <li class="_tagBox tagBox1">常用</li>
+          <li><a href="http://fanyi.baidu.com/?aldtype=85#en/zh/" target="_blank">百度翻译</a></li>
+          <li><a href="https://translate.google.com.hk/?hl=zh-CN" target="_blank">google翻译</a></li>
+          <li><a href="http://fanyi.youdao.com/" target="_blank">有道翻译</a></li>
+          <li><a href="https://pan.baidu.com/" target="_blank">百度云盘</a></li>
+          <li><a href="https://www.52pojie.cn/" target="_blank">吾爱破解</a></li>
+          <li><a href="https://smallpdf.com/cn" target="_blank">PDF</a></li>
+        </ul>
+        <ul>
+          <li class="_tagBox tagBox1">工具</li>
+          <li><a href="http://118.24.103.162/extra/lanzous/index.html" target="_blank">蓝奏云</a></li>
+          <li><a href="http://118.24.103.162/extra/sougo-images/index.html" target="_blank">搜狗图床</a></li>
+        </ul>
+        <ul>
+          <li class="_tagBox tagBox2">社交</li>
+          <li>
+            <a href="http://weibo.com/" target="_blank">新浪</a>
+          </li>
+          <li>
+            <a href="https://www.zhihu.com/" target="_blank">知乎</a>
+          </li>
+          <li>
+            <a href="https://user.qzone.qq.com/" target="_blank">QQ空间</a>
+          </li>
+          <li>
+            <a href="https://www.douyu.com/" target="_blank">斗鱼直播</a>
+          </li>
+        </ul>
+        <ul>
+          <li class="_tagBox tagBox3">知识</li>
+          <li>
+            <a href="http://www.runoob.com/" target="_blank">菜鸟</a>
+          </li>
+          <li>
+            <a href="http://tool.oschina.net/apidocs" target="_blank">API文档</a>
+          </li>
+          <li>
+            <a href="https://github.com/" target="_blank">GitHub</a>
+          </li>
+          <li>
+            <a href="https://www.cnblogs.com/" target="_blank">博客园</a>
+          </li>
+          <li>
+            <a href="http://www.csdn.net/" target="_blank">CSDN</a>
+          </li>
+          <li>
+            <a href="http://www.jianshu.com/" target="_blank">简书</a>
+          </li>
+        </ul>
+        <br>
+        <ul>
+          <li class="_tagBox tagBox4">学习</li>
+          <li>
+            <a href="https://www.nowcoder.com/" target="_blank">牛客</a>
+          </li>
+          <li>
+            <a href="https://www.hackerrank.com/" target="_blank">HackerRank</a>
+          </li>
+          <li>
+            <a href="http://www.zhizuobiao.com/personal/myCourse?pageNo=2" target="_blank">职坐标</a>
+          </li>
+          <li>
+            <a href="https://www.boxuegu.com/" target="_blank">博学谷</a>
+          </li>
+          <li>
+            <a href="https://www.oschina.net/" target="_blank">开源中国</a>
+          </li>
+        </ul>
+        <br>
+        <ul>
+          <li class="_tagBox tagBox5">购物</li>
+          <li>
+            <a href="https://www.taobao.com/" target="_blank">淘宝</a>
+          </li>
+          <li>
+            <a href="https://www.jd.com/" target="_blank">京东</a>
+          </li>
+          <li>
+            <a href="https://www.gome.com.cn/" target="_blank">国美</a>
+          </li>
+          <li>
+            <a href="https://www.suning.com/" target="_blank">苏宁</a>
+          </li>
+        </ul>
+        <br>
+        <ul>
+          <li class="_tagBox tagBox6">影音</li>
+          <li>
+            <a href="https://www.douban.com/" target="_blank">豆瓣</a>
+          </li>
+          <li>
+            <a href="https://www.youtube.com/" target="_blank">Youtube</a>
+          </li>
+          <li>
+            <a href="http://www.iqiyi.com/" target="_blank">爱奇艺</a>
+          </li>
+          <li>
+            <a href="https://v.qq.com/" target="_blank">腾讯视频</a>
+          </li>
+          <li>
+            <a href="http://www.youku.com/" target="_blank">优酷</a>
+          </li>
+          <li>
+            <a href="http://www.alamr.cn/" target="_blank">优看影院</a>
+          </li>
+          <li>
+            <a href="http://aaqqy.com/" target="_blank">高清影院</a>
+          </li>
+          <li>
+            <a href="http://www.yinyuetai.com/" target="_blank">音悦台</a>
+          </li>
+        </ul>
+      </div>
+      <iframe src="http://www.baidu.com" scrolling="no" style="display: none;"></iframe>
+    </div>
+  </div>
+</div>
+</body>
 </html>
