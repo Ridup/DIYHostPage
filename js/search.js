@@ -85,7 +85,7 @@ function taobaoSearch(value,name){
 function jdSearch(value,name){
     var url = "";
     if(value!=""){
-            url="https://search.jd.com/Search?keyword="+value;
+            url="https://search.jd.com/Search?keyword="+value+"&enc=utf-8";
         }else{
             url="https://www.jd.com/";
     }
