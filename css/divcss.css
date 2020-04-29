@@ -90,6 +90,7 @@ body {
     font-size: 16px;
     color: white;
     margin-top: 10px;
+    display: inline-grid;
 }
 
 #myTag ul {
@@ -99,9 +100,7 @@ body {
 
 #myTag li {
     float: left;
-    margin-bottom: 55px;
     margin-left: 15px;
-    margin-bottom: 15px;
     display: inline;
     padding-bottom: 10px;
 }

@@ -1,10 +1,3 @@
-/*
-* @Author: Marte
-* @Date:   2017-09-25 18:53:18
-* @Last Modified by:   Marte
-* @Last Modified time: 2017-09-27 23:56:32
-*/
-
 'use strict';
 function baiduSearch(value,name){
     var url = "";
@@ -96,7 +89,7 @@ function jdSearch(value,name){
 function crazySearch(value,name){
     var url = "";
     if(value!=""){
-            url="http://ifkdy.com/?q="+value;
+            url="http://ifkdy.com/search?key="+value;
     }else{
             url="http://ifkdy.com/";
     }
