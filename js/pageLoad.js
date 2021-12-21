@@ -13,7 +13,11 @@ jQuery(document).ready(function ($) {
       }
     });
   } else {
-    const currentBGUrl = window.localStorage.getItem("currentBGUrl");
+    let currentBGUrl = window.localStorage.getItem("currentBGUrl");
+    if(!currentBGUrl){
+        currentBGUrl = 'https://img.infinitynewtab.com/wallpaper/3278.jpg';
+        window.localStorage.setItem("currentBGUrl", currentBGUrl);
+    }
     const bgImgAttr = "background-image: url(" + currentBGUrl + ");"
     $(".page").attr("style", bgImgAttr);
     getFontColor();
@@ -124,7 +128,7 @@ function findTextColor(colorValue) {
     if (sColor && reg.test(sColor)) {
       if (sColor.length === 4) {
         let sColorNew = "#";
-        for (const i = 1; i < 4; i += 1) {
+        for (let i = 1; i < 4; i += 1) {
           sColorNew += sColor.slice(i, i + 1).concat(sColor.slice(i, i + 1));
         }
         sColor = sColorNew;
@@ -141,12 +145,6 @@ function findTextColor(colorValue) {
   } else {
     return false;
   }
-}
-
-
-// 访问音乐
-function toMyCloudMusic() {
-  window.open("http://118.24.103.162/music/", "_blank");
 }
 
 
